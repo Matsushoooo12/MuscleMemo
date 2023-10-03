@@ -1,11 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AntDesign } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Button } from "react-native";
 import SearchScreen from "../screens/SearchScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import HomeScreen from "../screens/HomeScreen";
-import MessageScreen from "../screens/MessageScreen";
+import MuscleScreen from "../screens/MuscleScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -45,11 +46,15 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Message"
-        component={MessageScreen}
+        name="Muscle"
+        component={MuscleScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="message1" size={size} color={color} />
+            <MaterialCommunityIcons
+              name="arm-flex-outline"
+              size={size}
+              color={color}
+            />
           ),
         }}
       />
